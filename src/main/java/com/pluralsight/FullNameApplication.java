@@ -4,25 +4,26 @@ import java.util.Scanner;
 
 public class FullNameApplication {
     static void main() {
-        System.out.print("What is your name? Press Enter to Start");
+
         Scanner scanner = new Scanner(System.in);
+        System.out.println("What is your name?");
 
-
-        String firstName = scanner.nextLine();
         System.out.println("First Name: ");
+        String firstName = scanner.nextLine().trim();
 
-        String middleInitial = scanner.next();
         System.out.println("Middle Initial: ");
+        String middleInitial = scanner.nextLine().trim();
 
-        String lastName = scanner.nextLine();
         System.out.println("Last Name: ");
-        scanner.nextLine();
+        String lastName = scanner.nextLine().trim();
 
-        System.out.println(firstName + " " + middleInitial + ", " + lastName);
+        System.out.println("Suffix");
+        String suffix = scanner.nextLine().trim();
+
+        String fullName = firstName;
+
         scanner.close();
-        String fullName = "";
 
 
-
+        }
     }
-}
