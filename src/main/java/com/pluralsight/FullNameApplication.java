@@ -22,6 +22,18 @@ public class FullNameApplication {
 
         String fullName = firstName;
 
+        if (!middleInitial.isBlank()) {
+            fullName += " " + middleInitial.charAt(0) + ".";
+        }
+
+        fullName += " " + lastName;
+
+        if (!suffix.isEmpty()) {
+            fullName += ", " + suffix;
+        }
+
+        System.out.println("\nFull Name: " + fullName);
+
         scanner.close();
 
 
